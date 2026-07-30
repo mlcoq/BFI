@@ -56,7 +56,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 7px;
             margin: 0 auto 28px;
             text-decoration: none;
             line-height: 1;
@@ -64,21 +64,18 @@
         .brand-mark {
             font-size: clamp(1.6rem, 4vw, 2rem);
             font-weight: 800;
-            letter-spacing: -0.03em;
-            color: #60a5fa;
+            letter-spacing: -0.04em;
+            color: #f8fafc;
             line-height: 1;
-        }
-        .brand-flow {
-            display: block;
-            width: min(100%, 10rem);
-            height: 12px;
-            overflow: visible;
+            border-bottom: 1.5px solid #60a5fa;
+            padding-bottom: 7px;
         }
         .brand-tag {
             color: #94a3b8;
-            font-weight: 500;
-            font-size: 0.75rem;
-            letter-spacing: 0.02em;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             line-height: 1.35;
         }
         h1 {
@@ -119,17 +116,6 @@
     <div class="panel">
         <a class="brand" href="/">
             <span class="brand-mark">BFI</span>
-            <svg class="brand-flow" viewBox="0 0 140 14" fill="none" aria-hidden="true">
-                <defs>
-                    <linearGradient id="brandFlowThanks" x1="0" y1="7" x2="140" y2="7" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#60a5fa"/>
-                        <stop offset="0.55" stop-color="#93c5fd"/>
-                        <stop offset="1" stop-color="#93c5fd" stop-opacity="0.25"/>
-                    </linearGradient>
-                </defs>
-                <path d="M1 9C18 9 28 3.5 42 4.5C56 5.5 62 11 78 10C94 9 104 3 122 4.5L132 5.5" stroke="url(#brandFlowThanks)" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M128 2.2L135.5 5.6L128 9" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
             <span class="brand-tag">Business Flow Intelligence</span>
         </a>
         <h1>Aanvraag ontvangen</h1>

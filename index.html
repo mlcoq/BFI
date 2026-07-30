@@ -67,36 +67,32 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 6px;
+            gap: 7px;
             text-decoration: none;
             flex-shrink: 1;
             min-width: 0;
             line-height: 1;
         }
         .brand-mark {
-            font-size: clamp(2rem, 5vw, 2.6rem);
+            font-size: clamp(1.85rem, 4.2vw, 2.35rem);
             font-weight: 800;
-            letter-spacing: -0.03em;
-            color: var(--accent);
+            letter-spacing: -0.04em;
+            color: #0f172a;
             line-height: 1;
-        }
-        .brand-flow {
-            display: block;
-            width: min(100%, 11rem);
-            height: 12px;
-            overflow: visible;
+            border-bottom: 1.5px solid #2563eb;
+            padding-bottom: 7px;
         }
         .brand-tag {
-            font-weight: 500;
-            font-size: clamp(0.9rem, 2vw, 1.05rem);
-            letter-spacing: 0.02em;
+            font-weight: 600;
+            font-size: clamp(0.72rem, 1.5vw, 0.82rem);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             line-height: 1.35;
             color: #64748b;
             white-space: nowrap;
         }
         @media (max-width: 480px) {
             .brand-tag { display: none; }
-            .brand-flow { width: 4.5rem; }
         }
 
         .hero {
@@ -376,17 +372,6 @@
         <div class="container header-flex">
             <a href="#" class="brand">
                 <span class="brand-mark">BFI</span>
-                <svg class="brand-flow" viewBox="0 0 140 14" fill="none" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="brandFlowHome" x1="0" y1="7" x2="140" y2="7" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#1d4ed8"/>
-                            <stop offset="0.55" stop-color="#3b82f6"/>
-                            <stop offset="1" stop-color="#93c5fd" stop-opacity="0.35"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M1 9C18 9 28 3.5 42 4.5C56 5.5 62 11 78 10C94 9 104 3 122 4.5L132 5.5" stroke="url(#brandFlowHome)" stroke-width="2.2" stroke-linecap="round"/>
-                    <path d="M128 2.2L135.5 5.6L128 9" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
                 <span class="brand-tag">Business Flow Intelligence</span>
             </a>
             <a href="#scan" class="btn" style="padding: 12px 24px; font-size: 1rem; box-shadow: none;">Plan AI-Scan</a>
