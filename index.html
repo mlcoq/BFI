@@ -62,28 +62,30 @@
             gap: 16px;
         }
         
-        .logo-container {
+        .brand {
             display: flex;
-            align-items: center;
+            align-items: baseline;
+            gap: 0.35em;
             text-decoration: none;
-            line-height: 0;
             flex-shrink: 1;
             min-width: 0;
+            font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--primary);
+            line-height: 1.2;
         }
-
-        .logo-container img {
-            height: 96px;
-            width: auto;
-            max-width: min(420px, 62vw);
-            display: block;
-            object-fit: contain;
+        .brand span {
+            font-weight: 500;
+            font-size: 0.78em;
+            letter-spacing: -0.01em;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-
-        @media (max-width: 640px) {
-            .logo-container img {
-                height: 72px;
-                max-width: 58vw;
-            }
+        @media (max-width: 480px) {
+            .brand span { display: none; }
         }
 
         .hero {
@@ -352,9 +354,7 @@
 
     <header>
         <div class="container header-flex">
-            <a href="#" class="logo-container" aria-label="BFI | Business Flow Intelligence">
-                <img src="/BFI_logo.png" alt="BFI | Business Flow Intelligence">
-            </a>
+            <a href="#" class="brand">BFI <span>| Business Flow Intelligence</span></a>
             <a href="#scan" class="btn" style="padding: 12px 24px; font-size: 1rem; box-shadow: none;">Plan AI-Scan</a>
         </div>
     </header>

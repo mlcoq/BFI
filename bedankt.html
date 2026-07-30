@@ -52,13 +52,18 @@
             backdrop-filter: blur(10px);
             animation: rise-in 0.7s ease both;
         }
-        .logo {
-            height: 72px;
-            width: auto;
-            max-width: min(320px, 70vw);
+        .brand {
             display: block;
             margin: 0 auto 28px;
-            object-fit: contain;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        .brand span {
+            color: #64748b;
+            font-weight: 500;
         }
         h1 {
             color: #f8fafc;
@@ -96,7 +101,7 @@
 </head>
 <body>
     <div class="panel">
-        <img class="logo" src="./BFI_logo.png" alt="BFI | Business Flow Intelligence">
+        <a class="brand" href="/">BFI <span>| Business Flow Intelligence</span></a>
         <h1>Aanvraag ontvangen</h1>
         <p>We nemen binnen 24 uur persoonlijk contact met u op om uw AI-Scan in te plannen.</p>
         <a href="/">Terug naar bfi.nl</a>
