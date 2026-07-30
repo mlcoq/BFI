@@ -463,7 +463,11 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Zakelijke e-mail</label>
-                        <input type="email" id="email" name="email" class="form-control" required placeholder="naam@bedrijf.nl">
+                        <input type="email" id="email" name="email" class="form-control" required
+                            placeholder="naam@bedrijf.nl"
+                            autocomplete="email"
+                            pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$"
+                            title="Gebruik een geldig e-mailadres met domein, bijvoorbeeld naam@bedrijf.nl">
                     </div>
                     <div class="form-group">
                         <label for="phone">Telefoon</label>
@@ -481,6 +485,38 @@
             <p style="font-size: 0.85rem; margin-top: 12px; color: #64748b;">Eindhoven | AI, koppelingen, data & procesautomatisering voor het MKB</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const email = document.getElementById('email');
+            if (!email) return;
+
+            function validateEmail() {
+                const value = email.value.trim();
+                if (!value) {
+                    email.setCustomValidity('');
+                    return;
+                }
+
+                const basic = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(value);
+                const domain = value.split('@')[1] || '';
+                const labels = domain.split('.');
+                const labelsOk = labels.length >= 2 && labels.every(function (part) {
+                    return /^[a-zA-Z0-9-]+$/.test(part) && part.length >= 2;
+                });
+
+                email.setCustomValidity(
+                    basic && labelsOk
+                        ? ''
+                        : 'Vul een geldig e-mailadres in, bijvoorbeeld naam@bedrijf.nl'
+                );
+            }
+
+            email.addEventListener('input', validateEmail);
+            email.addEventListener('blur', validateEmail);
+            email.form.addEventListener('submit', validateEmail);
+        })();
+    </script>
 
 </body>
 </html>
