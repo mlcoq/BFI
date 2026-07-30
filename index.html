@@ -220,15 +220,18 @@
         
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
             .card-grid { grid-template-columns: 1fr; }
         }
         .card {
             background: var(--white);
-            padding: 36px 32px;
+            padding: 28px 26px;
             border-radius: 18px;
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
@@ -250,15 +253,16 @@
             box-shadow: var(--shadow-md);
         }
         .card h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--primary);
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             font-weight: 800;
+            letter-spacing: -0.02em;
         }
         .card p {
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             color: #475569;
-            line-height: 1.7;
+            line-height: 1.65;
         }
 
         /* Value Section styling */
@@ -369,17 +373,33 @@
 
     <section id="diensten" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Waar uw team nu uren aan kwijt is</h2>
-            <p class="section-subtitle">Dat werk hoeft niemand meer handmatig te doen.</p>
+            <h2 class="section-title">Waar directeuren nu geld laten liggen</h2>
+            <p class="section-subtitle">Concrete projecten. Fixed-price. Gebouwd op wat u al heeft.</p>
             
             <div class="card-grid">
                 <div class="card">
-                    <h3>Documenten die zichzelf verwerken</h3>
-                    <p>PDF-facturen, inkooporders en pakbonnen worden binnen seconden uitgelezen. De juiste data belandt direct in uw CRM, ERP of database — zonder overtypen, zonder typefouten.</p>
+                    <h3>AI-documentverwerking</h3>
+                    <p>Facturen, orders en pakbonnen worden uitgelezen en landen direct in CRM, ERP of SQL — zonder overtypen.</p>
                 </div>
                 <div class="card">
                     <h3>Inbox die meedenkt</h3>
-                    <p>AI sorteert inkomende mail op urgentie, trekt de kern eruit en zet een concept-antwoord klaar. Uw binnendienst houdt de controle; het zware werk is al gedaan.</p>
+                    <p>Mail op urgentie gesorteerd, kern eruit, concept-antwoord klaar. Uw team houdt de controle.</p>
+                </div>
+                <div class="card">
+                    <h3>Systemen die met elkaar praten</h3>
+                    <p>CRM, boekhouding, logistiek: één order in, overal bijgewerkt. Geen dubbele invoer meer tussen schermen.</p>
+                </div>
+                <div class="card">
+                    <h3>Power BI stuurinformatie</h3>
+                    <p>Verspreide data uit Excel, SQL en ERP in één live dashboard. Marges, knelpunten en productiviteit — realtime.</p>
+                </div>
+                <div class="card">
+                    <h3>Order, productie & voorraad</h3>
+                    <p>Weg met Access en Excel-lijsten. Een moderne flow van order tot planning en inventory die wél meegroeit.</p>
+                </div>
+                <div class="card">
+                    <h3>SharePoint & Workspace op orde</h3>
+                    <p>Geen digitaal doolhof meer. Strakke mappen, rechten en flows — documenten terugvinden in seconden.</p>
                 </div>
             </div>
         </div>
@@ -439,7 +459,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 BFI | Business Flow Intelligence. Alle rechten voorbehouden.</p>
-            <p style="font-size: 0.85rem; margin-top: 12px; color: #64748b;">Eindhoven | AI-workflows & systeemkoppelingen voor het MKB</p>
+            <p style="font-size: 0.85rem; margin-top: 12px; color: #64748b;">Eindhoven | AI, koppelingen, data & procesautomatisering voor het MKB</p>
         </div>
     </footer>
 
