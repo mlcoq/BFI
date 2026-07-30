@@ -50,10 +50,11 @@
             background-color: rgba(244, 247, 251, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(216, 224, 234, 0.8);
-            padding: 14px 0;
+            padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            overflow: visible;
         }
         .header-flex {
             display: flex;
@@ -80,10 +81,10 @@
             font-weight: 500;
             font-size: clamp(0.9rem, 2vw, 1.05rem);
             letter-spacing: 0.02em;
+            line-height: 1.35;
             color: var(--text-muted);
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            overflow: visible;
             max-width: 100%;
         }
         @media (max-width: 480px) {
