@@ -56,27 +56,43 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 7px;
+            gap: 0;
             margin: 0 auto 28px;
             text-decoration: none;
             line-height: 1;
         }
+        .brand-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid rgba(147, 197, 253, 0.55);
+            border-radius: 10px;
+            background: rgba(15, 23, 42, 0.45);
+            box-sizing: border-box;
+        }
         .brand-mark {
-            font-size: clamp(1.6rem, 4vw, 2rem);
+            font-size: clamp(1.45rem, 3.5vw, 1.8rem);
             font-weight: 800;
             letter-spacing: -0.04em;
             color: #f8fafc;
             line-height: 1;
-            border-bottom: 1.5px solid #60a5fa;
-            padding-bottom: 7px;
+            padding: 0.42em 0.7em 0.38em;
+        }
+        .brand-connector {
+            display: block;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
         }
         .brand-tag {
             color: #94a3b8;
             font-weight: 600;
-            font-size: 0.7rem;
-            letter-spacing: 0.08em;
+            font-size: 0.68rem;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
-            line-height: 1.35;
+            line-height: 1.25;
+            padding: 0.55em 0.75em;
+            white-space: nowrap;
         }
         h1 {
             color: #f8fafc;
@@ -114,9 +130,13 @@
 </head>
 <body>
     <div class="panel">
-        <a class="brand" href="/">
-            <span class="brand-mark">BFI</span>
-            <span class="brand-tag">Business Flow Intelligence</span>
+        <a class="brand" href="/" aria-label="BFI | Business Flow Intelligence">
+            <span class="brand-box brand-mark">BFI</span>
+            <svg class="brand-connector" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M9 16V4" stroke="rgba(147,197,253,0.7)" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M5.2 7.2L9 3.2L12.8 7.2" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand-box brand-tag">Business Flow Intelligence</span>
         </a>
         <h1>Aanvraag ontvangen</h1>
         <p>We nemen persoonlijk contact met u op om uw AI-Scan in te plannen.</p>

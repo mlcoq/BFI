@@ -67,32 +67,49 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 7px;
+            gap: 0;
             text-decoration: none;
             flex-shrink: 1;
             min-width: 0;
             line-height: 1;
         }
+        .brand-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid #93c5fd;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.92);
+            box-sizing: border-box;
+        }
         .brand-mark {
-            font-size: clamp(1.85rem, 4.2vw, 2.35rem);
+            font-size: clamp(1.55rem, 3.6vw, 1.95rem);
             font-weight: 800;
             letter-spacing: -0.04em;
             color: #0f172a;
             line-height: 1;
-            border-bottom: 1.5px solid #2563eb;
-            padding-bottom: 7px;
+            padding: 0.42em 0.7em 0.38em;
+        }
+        .brand-connector {
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin-left: 1.1em;
+            flex-shrink: 0;
         }
         .brand-tag {
             font-weight: 600;
-            font-size: clamp(0.72rem, 1.5vw, 0.82rem);
-            letter-spacing: 0.08em;
+            font-size: clamp(0.68rem, 1.4vw, 0.78rem);
+            letter-spacing: 0.04em;
             text-transform: uppercase;
-            line-height: 1.35;
-            color: #64748b;
+            line-height: 1.25;
+            color: #475569;
             white-space: nowrap;
+            padding: 0.55em 0.75em;
         }
         @media (max-width: 480px) {
-            .brand-tag { display: none; }
+            .brand-tag,
+            .brand-connector { display: none; }
         }
 
         .hero {
@@ -370,9 +387,13 @@
 
     <header>
         <div class="container header-flex">
-            <a href="#" class="brand">
-                <span class="brand-mark">BFI</span>
-                <span class="brand-tag">Business Flow Intelligence</span>
+            <a href="#" class="brand" aria-label="BFI | Business Flow Intelligence">
+                <span class="brand-box brand-mark">BFI</span>
+                <svg class="brand-connector" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <path d="M9 16V4" stroke="#93c5fd" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M5.2 7.2L9 3.2L12.8 7.2" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="brand-box brand-tag">Business Flow Intelligence</span>
             </a>
             <a href="#scan" class="btn" style="padding: 12px 24px; font-size: 1rem; box-shadow: none;">Plan AI-Scan</a>
         </div>
