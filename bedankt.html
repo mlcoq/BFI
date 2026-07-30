@@ -53,30 +53,34 @@
             animation: rise-in 0.7s ease both;
         }
         .brand {
-            display: flex;
+            display: inline-flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             gap: 7px;
             margin: 0 auto 28px;
             text-decoration: none;
             line-height: 1;
+            background: #f4f7fb;
+            padding: 14px 16px;
+            border-radius: 12px;
         }
         .brand-mark {
-            font-size: clamp(1.6rem, 4vw, 2rem);
+            font-size: clamp(1.85rem, 4.2vw, 2.35rem);
             font-weight: 800;
             letter-spacing: -0.04em;
-            color: #f8fafc;
+            color: #0f172a;
             line-height: 1;
-            border-bottom: 1.5px solid #60a5fa;
+            border-bottom: 1.5px solid #2563eb;
             padding-bottom: 7px;
         }
         .brand-tag {
-            color: #94a3b8;
             font-weight: 600;
-            font-size: 0.7rem;
+            font-size: clamp(0.72rem, 1.5vw, 0.82rem);
             letter-spacing: 0.08em;
             text-transform: uppercase;
             line-height: 1.35;
+            color: #64748b;
+            white-space: nowrap;
         }
         h1 {
             color: #f8fafc;
@@ -91,7 +95,7 @@
             color: #94a3b8;
             margin-bottom: 32px;
         }
-        a {
+        .btn {
             display: inline-block;
             background: var(--accent);
             color: #fff;
@@ -102,7 +106,7 @@
             box-shadow: 0 8px 24px rgba(29, 78, 216, 0.35);
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
-        a:hover {
+        .btn:hover {
             background: var(--accent-hover);
             transform: translateY(-1px);
         }
@@ -120,7 +124,7 @@
         </a>
         <h1>Aanvraag ontvangen</h1>
         <p>We nemen persoonlijk contact met u op om uw AI-Scan in te plannen.</p>
-        <a href="/">Terug naar bfi.nl</a>
+        <a href="/" class="btn">Terug naar bfi.nl</a>
     </div>
 </body>
 </html>
